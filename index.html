@@ -69,9 +69,6 @@
 
             // Auto-Restart
             while (1) {
-                // Set score text
-                document.getElementById('score').innerHTML = `Press any arrow key to start moving!`;
-
                 // While the game still runs
                 while (this.launched) {
                     // Wait for the next frame
@@ -202,6 +199,11 @@
                     this.pos = [[x0, y0], [x0 + 1, y0], [x0 + 2, y0]];
                 }
             })((this.xC - (this.xC % 2)) / 2 - 1, (this.yC - (this.yC % 2)) / 2 - 1);
+          
+            // Set score text
+            document.getElementById('score').innerHTML = `You have 0 points.`;
+            // Set start text
+            document.getElementById('score').innerHTML = `Press any arrow key to start moving!`;
         }
     }
 
