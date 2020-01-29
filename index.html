@@ -200,10 +200,13 @@
                 }
             })((this.xC - (this.xC % 2)) / 2 - 1, (this.yC - (this.yC % 2)) / 2 - 1);
           
+            // Reset game time
+            this.currentTime = 0;
+          
             // Set score text
             document.getElementById('score').innerHTML = `You have 0 points.`;
             // Set start text
-            document.getElementById('score').innerHTML = `Press any arrow key to start moving!`;
+            document.getElementById('time').innerHTML = `Press any arrow key to start moving!`;
         }
     }
 
